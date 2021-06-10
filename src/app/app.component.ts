@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   appTitle = 'Shopping Cart 12345';
+  leftFooter = 'All copy rights reserved, Shopping Cart';
 }
