@@ -9,6 +9,8 @@ export class LayoutComponent implements OnInit {
 
   @Input() appTitle = '';
 
+  @Input() leftFooterMain = '';
+
   constructor() {
   }
 
