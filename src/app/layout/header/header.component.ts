@@ -1,24 +1,26 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+
   @Input() appTitle = '';
-  activeMenu = 'demo';
-  menuItems = [
-    { label: 'DEMO', id: 'demo' },
-    { label: 'SHOPNew', id: 'shopnew' },
-    { label: 'PRODUCT', id: 'product' },
-    { label: 'SALESale', id: 'salesale' },
-    { label: 'PORTFOLIO', id: 'portfolio' },
-    { label: 'LOOKBOOK', id: 'lookbook' },
-    { label: 'BLOG', id: 'blog' },
-  ];
+  @Output() addItem: EventEmitter<string> = new EventEmitter<string>();
+  newTodo = '';
 
-  constructor() {}
+  /*
+    addButtonClick
+      5. this will emit an output (addItem) with newTodo (which is entered by user)
+  */
+  addButtonClick(): void {
+    this.addItem.emit(this.newTodo);
+  }
 
-  ngOnInit(): void {}
+
+  clear(): void {
+    this.newTodo = '';
+  }
 }
