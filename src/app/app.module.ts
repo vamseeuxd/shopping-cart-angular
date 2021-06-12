@@ -10,6 +10,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { LayoutComponent } from './layout/layout.component';
     CarouselModule.forRoot(),
     AccordionModule.forRoot(),
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
