@@ -10,12 +10,19 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
+import { FormsModule } from '@angular/forms';
+import { TodoListComponent } from './pages/todo-list/todo-list.component';
+import { TodoListHeaderComponent } from './pages/todo-list/todo-list-header/todo-list-header.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    LayoutComponent
+    LayoutComponent,
+    TodoListComponent,
+    TodoListHeaderComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -23,6 +30,7 @@ import { LayoutComponent } from './layout/layout.component';
     CarouselModule.forRoot(),
     AccordionModule.forRoot(),
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

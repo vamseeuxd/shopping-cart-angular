@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  appTitle = 'Shopping Cart 12345';
+  appTitle = 'Todo List';
   leftFooter = 'All copy rights reserved, Shopping Cart';
+  todoList = [];
 }
