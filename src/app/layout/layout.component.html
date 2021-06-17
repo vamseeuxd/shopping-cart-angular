@@ -2,10 +2,8 @@
   6. added event listner for (addItem) output
   7. if (addItem) output emits, onAddItem function will call with $event & addHeaderRef
  -->
-<app-header #addHeaderRef (addItem)="onAddItem($event, addHeaderRef)" [appTitle]="appTitle"></app-header>
-<ul class="list-group" style="margin-top: 110px;">
-  <li *ngFor="let todo of todos; let todoIndex = index" class="list-group-item d-flex">
-    {{todo}}
-    <button (click)="deleteItem(todoIndex);" class="btn btn-danger btn-sm ms-auto">Delete</button>
-  </li>
-</ul>
+<app-header [appTitle]="appTitle"></app-header>
+<div class="container-fluid" style="margin-top: 60px">
+  <router-outlet></router-outlet>
+</div>
+<!-- <app-todo-list></app-todo-list> -->
