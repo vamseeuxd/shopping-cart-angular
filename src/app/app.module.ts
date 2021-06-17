@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { TodoListComponent } from './pages/todo-list/todo-list.component';
 import { TodoListHeaderComponent } from './pages/todo-list/todo-list-header/todo-list-header.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     LayoutComponent,
     TodoListComponent,
     TodoListHeaderComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserAnimationsModule,
