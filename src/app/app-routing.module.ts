@@ -1,15 +1,10 @@
-import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { TodoListComponent } from './pages/todo-list/todo-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
-  { path: 'page-1', component: TodoListComponent },
-  { path: 'about-us', component: AboutUsComponent },
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
