@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand ms-3">Navbar</a>
+  <button class="navbar-toggler" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+
+      <!-- Looping Main Menu Items -->
+      <li class="nav-item active" *ngFor="let menu of menuData">
+
+        <!-- If not Sub Menu show only anchor-tag -->
+        <a *ngIf="!menu.subMenu" class="nav-link" href="#">{{menu.label}}</a>
+
+        <!-- If Sub Menu avalible show Drop Down -->
+        <div *ngIf="menu.subMenu" class="btn-group" dropdown>
+          <button dropdownToggle type="button" class="btn btn-light text-muted dropdown-toggle">
+            {{menu.label}} <span class="caret"></span>
+          </button>
+
+          <!-- Lopping Sub Menu Items -->
+          <ul *dropdownMenu class="dropdown-menu" role="menu">
+            <li *ngFor="let subMenu of menu.subMenu" role="menuitem">
+              <a class="dropdown-item" href="#">{{subMenu.label}}</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</nav>

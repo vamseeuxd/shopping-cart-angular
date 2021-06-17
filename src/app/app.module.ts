@@ -11,18 +11,22 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
 import { FormsModule } from '@angular/forms';
+import { NestedMenuComponent } from './components/nested-menu/nested-menu.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    LayoutComponent
+    LayoutComponent,
+    NestedMenuComponent
   ],
   imports: [
     BrowserAnimationsModule,
     AlertModule.forRoot(),
     CarouselModule.forRoot(),
     AccordionModule.forRoot(),
+    BsDropdownModule.forRoot(),
     BrowserModule,
     FormsModule,
     AppRoutingModule
