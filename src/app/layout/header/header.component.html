@@ -1,24 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <div class="container-fluid">
-    <h4 class="text-muted text-center w-100">{{appTitle}}</h4>
-    <div class="input-group mb-3">
-      <!--
-        Text Input
-          1. allow user to enter new Todo.
-          2. while user entering new text "newTodo" prop will updated by [(ngModel)].
-          3. while "newTodo" prop is changed programatically,   Text Input will updated.
-      -->
-      <input #newTodoInput [(ngModel)]="newTodo"
-            (keyup.enter)="addButtonClick()"
-            type="text" class="form-control"
-            placeholder="New Todo Item">
-      <!--
-        Add Button
-          4. if user click on Add Button, call addButtonClick() function
-       -->
-      <button (click)="addButtonClick()" class="btn btn-outline-secondary" type="button" id="button-addon2">
-       Add
-      </button>
-    </div>
+<nav class="navbar navbar-expand-lg shadow navbar-light bg-light fixed-top">
+  <a class="navbar-brand ms-3">{{appTitle}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="text-danger fw-bold" routerLink="page-1">Todo-List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="text-danger fw-bold" routerLink="about-us">About Us</a>
+      </li>
+    </ul>
   </div>
 </nav>
