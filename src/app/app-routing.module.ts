@@ -5,13 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 const routes: Routes = [
+  { path:'', redirectTo:'page-1', pathMatch:'full'},
   { path: 'page-1', component: TodoListComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact-us', component: ContactUsComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash:true})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
