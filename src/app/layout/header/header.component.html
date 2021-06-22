@@ -30,7 +30,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item" *ngFor = "let menu of menuItems">
-        <a class="nav-link p-1 ps-3 pe-3" routerLink="{{menu.link}}" routerLinkActive="bg-primary text-white">{{menu.item}}</a>
+        <a class="nav-link p-1 ps-3 pe-3" [routerLink]="menu.link" routerLinkActive="bg-primary text-white">{{menu.item}}</a>
       </li>
     </ul>
   </div>
