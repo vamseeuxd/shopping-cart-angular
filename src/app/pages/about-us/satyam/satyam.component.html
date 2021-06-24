@@ -1,1 +1,25 @@
 <p>satyam works!</p>
+<form class="row g-3" #satyamForm="ngForm">
+  <div class="col-md-4">
+    <label class="form-label">First name <code>*</code></label>
+    <input
+      type="text"
+      name="firstName"
+      ngModel
+      autocomplete="off"
+      class="form-control is-valid"
+      [class.is-valid]="satyamForm?.controls?.firstName?.valid"
+      [class.is-invalid]="satyamForm?.controls?.firstName?.invalid && satyamForm?.controls?.firstName?.dirty"
+      id="validationServer01"
+      minlength="3"
+      maxlength="10"
+      required
+    />
+    <div class="valid-feedback">First Name required 3 to 10 chars</div>
+    <div class="invalid-feedback">First Name required 3 to 10 chars</div>
+  </div>
+  <div>
+    <button class="btn btn-primary" [disabled]="satyamForm.invalid" (click)="subMitForm(satyamForm)" type="button">Submit</button>
+  </div>
+</form>
+<pre>{{satyamForm.value | json}}</pre>
