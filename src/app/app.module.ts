@@ -15,6 +15,10 @@ import { TodoListComponent } from './pages/todo-list/todo-list.component';
 import { TodoListHeaderComponent } from './pages/todo-list/todo-list-header/todo-list-header.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { SanthoshComponent } from './pages/about-us/santhosh/santhosh.component';
+import { SatyamComponent } from './pages/about-us/satyam/satyam.component';
+import { VamseeComponent } from './pages/about-us/vamsee/vamsee.component';
+import { MoreInfoComponent } from './pages/more-info/more-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,11 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
     TodoListComponent,
     TodoListHeaderComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    SanthoshComponent,
+    SatyamComponent,
+    VamseeComponent,
+    MoreInfoComponent
   ],
   imports: [
     BrowserAnimationsModule,

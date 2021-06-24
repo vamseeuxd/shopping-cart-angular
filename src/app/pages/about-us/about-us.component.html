@@ -1,12 +1,13 @@
 <div class="d-flex flex-row h-100">
 <ul class="list-group me-2" style="width: 250px;">
-  <li role="button" [routerLink]="['/about-us','Satyam']" [class.active]="presonName == 'Satyam'" class="list-group-item">Satyam</li>
-  <li role="button" [routerLink]="['/about-us','Santhosh']" [class.active]="presonName == 'Santhosh'" class="list-group-item">Santhosh</li>
-  <li role="button" [routerLink]="['/about-us','Vamsee']" [class.active]="presonName == 'Vamsee'" class="list-group-item">Vamsee</li>
+  <li role="button" [routerLink]="['/about-us','satyam']" routerLinkActive="active" class="list-group-item">Satyam</li>
+  <li role="button" [routerLink]="['/about-us','santhosh']" routerLinkActive="active" class="list-group-item">Santhosh</li>
+  <li role="button" [routerLink]="['/about-us','vamsee']" routerLinkActive="active" class="list-group-item">Vamsee</li>
 </ul>
 <div class="card shadow w-100" style="height: calc(100vh - 68px);">
   <div class="card-body">
-    <h4>This is about {{presonName}}</h4>
+    <!-- <h4>This is about {{presonName}}</h4> -->
+    <router-outlet></router-outlet>
   </div>
 </div>
 </div>

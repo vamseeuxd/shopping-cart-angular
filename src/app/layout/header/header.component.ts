@@ -9,7 +9,7 @@ export class HeaderComponent {
   @Input() appTitle = '';
   menuItems = [
     { item: 'Todo List', link: ['/page-1'], },
-    { item: 'About Us', link: ['/about-us','Satyam'] },
+    { item: 'About Us', link: ['/about-us'] },
     { item: 'Contact Us', link: ['/contact-us'] },
   ];
 }
