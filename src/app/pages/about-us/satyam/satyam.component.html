@@ -1,15 +1,15 @@
 <p>satyam works!</p>
 <form class="row g-3" #satyamForm="ngForm">
   <div class="col-md-4">
-    <label class="form-label">First name <code>*</code></label>
+    <label class="form-label">Name <code>*</code></label>
     <input
       type="text"
-      name="firstName"
+      name="name"
       ngModel
       autocomplete="off"
       class="form-control is-valid"
-      [class.is-valid]="satyamForm?.controls?.firstName?.valid"
-      [class.is-invalid]="satyamForm?.controls?.firstName?.invalid && satyamForm?.controls?.firstName?.dirty"
+      [class.is-valid]="satyamForm?.controls?.name?.valid"
+      [class.is-invalid]="satyamForm?.controls?.name?.invalid && satyamForm?.controls?.name?.dirty"
       id="validationServer01"
       minlength="3"
       maxlength="10"
@@ -18,8 +18,51 @@
     <div class="valid-feedback">First Name required 3 to 10 chars</div>
     <div class="invalid-feedback">First Name required 3 to 10 chars</div>
   </div>
+  <div class="col-md-4">
+    <label class="form-label">Avatar <code>*</code></label>
+    <input
+      type="url"
+      name="avatar"
+      ngModel
+      autocomplete="off"
+      class="form-control is-valid"
+      [class.is-valid]="satyamForm?.controls?.avatar?.valid"
+      [class.is-invalid]="satyamForm?.controls?.avatar?.invalid && satyamForm?.controls?.avatar?.dirty"
+      id="validationServer01"
+      required
+    />
+    <div class="valid-feedback">Provide Valid Image URL</div>
+    <div class="invalid-feedback">Provide Valid Image URL</div>
+  </div>
   <div>
-    <button class="btn btn-primary" [disabled]="satyamForm.invalid" (click)="subMitForm(satyamForm)" type="button">Submit</button>
+    <button class="btn btn-primary" [disabled]="satyamForm.invalid" (click)="addStudent(satyamForm)" type="button">Submit</button>
   </div>
 </form>
-<pre>{{satyamForm.value | json}}</pre>
+<!-- <pre>{{studentData | json}}</pre> -->
+
+<ul class="list-group mt-3" style="overflow-y: auto;max-height: calc(100vh - 280px);">
+  <li class="list-group-item justify-content-between" *ngFor="let student of studentData" (click)="getStudentById(student.id, staticModal)">
+    <img class="rounded-circle me-4" style="width: 40px;height: 40px;" [src]="student.avatar">
+    <label>{{student.name}}</label>
+    <!-- <pre>{{student|json}}</pre> -->
+  </li>
+</ul>
+
+
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-static-name" class="modal-title pull-left">Static modal</h4>
+        <button type="button" class="btn btn-outline-danger btn-sm pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span class="fa fa-close"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="rounded-circle me-4" style="width: 40px;height: 40px;" [src]="selectedStudent.avatar">
+        <label>{{selectedStudent.name}}</label>
+        <pre>{{selectedStudent|json}}</pre>
+      </div>
+    </div>
+  </div>
+</div>

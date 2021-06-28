@@ -19,6 +19,9 @@ import { SanthoshComponent } from './pages/about-us/santhosh/santhosh.component'
 import { SatyamComponent } from './pages/about-us/satyam/satyam.component';
 import { VamseeComponent } from './pages/about-us/vamsee/vamsee.component';
 import { MoreInfoComponent } from './pages/more-info/more-info.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,8 +42,10 @@ import { MoreInfoComponent } from './pages/more-info/more-info.component';
     AlertModule.forRoot(),
     CarouselModule.forRoot(),
     AccordionModule.forRoot(),
+    ModalModule.forRoot(),
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
